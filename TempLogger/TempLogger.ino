@@ -1,6 +1,6 @@
 /*
   MySQL Temperature Logger
-  Version 1.0.5
+  Version 1.0.6
   Reading temperature with DHT22 sensor and logging to MySQL Database.
 */
 
@@ -13,7 +13,7 @@
 // Library for MySQL Connection
 #include <sha1.h>
 #include <mysql.h>
-
+// Library for DHT22 Temperature/Humidity sensor
 #include <DHT.h>
 
 ////          ////
@@ -33,7 +33,7 @@ byte mac[] = { 0xDE, 0xAD, 0xBE, 0xEF, 0xFE, 0xED };
 IPAddress server_addr(192, 168, 55, 10);
 Connector my_conn;
 char user[] = "temp_logger_user";
-char password[] = "HostnServe123$";
+char password[] = "Password123";
 // MySQL Query
 char INSERT_SQL[] = "INSERT INTO temp_logger.log (log_temp_c, log_hum, log_sensor_id) VALUES (%s, %s, %d)";
 char query[128];
@@ -45,7 +45,7 @@ char humidity[10];
 ////         ////
 
 // Initialise variables
-String ver = "1.0.5";
+String ver = "1.0.6";
 int sensorID = 1001;
 float temp = 0;
 float hum = 0;
@@ -104,7 +104,6 @@ void setup(){
   redLed();
   delay(2000);
   
-  
   lcd.clear();
   lcd.setCursor(0, 0);
   lcd.print("Status:   V" + ver);
@@ -123,10 +122,7 @@ void setup(){
   greenLed();
   }
   
-  
   //logData();
-  
-  
 }
 
 void logData(){
@@ -227,9 +223,7 @@ delay(10000);
 clearLine();
 lcd.print("Waiting...");
 
-
 delay(284000); //5 mins total
-
 
   //printIPAddress();
   //delay(5000); // Loop delay
