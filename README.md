@@ -2,7 +2,7 @@
 ## Get Extra Libraries
 ### Download/Install Arduino MySQL Connector
 1. Download the .zip file from https://launchpad.net/mysql-arduino/release-1.0.4-ga/release-1.0.4-ga.
-2. Un-zip the downloaded file and copy the two folders into ```Documents\Arduino\libraries```
+2. Un-zip the downloaded file and copy the two folders into ```Documents\Arduino\libraries```.
 
 ## Set Up Database
 Import .sql file into MySQL
