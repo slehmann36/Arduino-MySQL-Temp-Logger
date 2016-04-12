@@ -4,6 +4,8 @@
 1. Download the .zip file from https://launchpad.net/mysql-arduino/release-1.0.4-ga/release-1.0.4-ga.
 2. Un-zip the downloaded file and copy the two folders into ```Documents\Arduino\libraries```.
 
+> Note: If you have the Arduino IDE running, you will need to relaunch to see the new libraries.
+
 ## Set Up Database
 Import .sql file into MySQL
 
