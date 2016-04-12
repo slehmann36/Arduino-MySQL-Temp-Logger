@@ -30,7 +30,6 @@ byte mac[] = { 0xDE, 0xAD, 0xBE, 0xEF, 0xFE, 0xED };
 ////     ////
 
 // IP of MySQL Server
-//IPAddress server_addr(122, 151, 124, 70);
 IPAddress server_addr(192, 168, 55, 10);
 Connector my_conn;
 char user[] = "temp_logger_user";
